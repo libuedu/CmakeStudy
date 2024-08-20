@@ -1,0 +1,1 @@
+/usr/bin/c++  -w -O2 -g -ggdb -w   CMakeFiles/myLogTest.dir/main.cpp.o  -o ../../../bin/myLogTest  -Wl,-rpath,/home/u/Desktop/cmakeproject/lib ../../../lib/libcommon.so -lglog 

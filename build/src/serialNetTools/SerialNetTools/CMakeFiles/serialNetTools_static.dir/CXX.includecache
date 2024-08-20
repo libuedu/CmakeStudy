@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/u/Desktop/cmakeproject/src/serialNetTools/SerialNetTools/serialNetTools.cpp
+serialNetTools.h
+/home/u/Desktop/cmakeproject/src/serialNetTools/SerialNetTools/serialNetTools.h
+
+/home/u/Desktop/cmakeproject/src/serialNetTools/SerialNetTools/serialNetTools.h
+iostream
+-
+

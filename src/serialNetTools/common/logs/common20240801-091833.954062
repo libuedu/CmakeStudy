@@ -1,0 +1,4 @@
+Log file created at: 2024/08/01 09:18:33
+Running on machine: wzh-C246-WU4
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0801 09:18:33.636966 954062 main_common_test.cpp:14] Log Hello World!!!

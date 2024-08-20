@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../../lib/libserialNetTools_static.a  CMakeFiles/serialNetTools_static.dir/serialNetTools.cpp.o
+/usr/bin/ranlib ../../../../lib/libserialNetTools_static.a

@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/u/Desktop/cmakeproject/src/serialNetTools/common/common.cpp
+common.h
+/home/u/Desktop/cmakeproject/src/serialNetTools/common/common.h
+
+/home/u/Desktop/cmakeproject/src/serialNetTools/common/common.h
+iostream
+-
+string
+-
+fstream
+-
+cstring
+-
+unistd.h
+-
+
+/home/u/Desktop/cmakeproject/src/serialNetTools/common/myLog.cpp
+myLog.h
+/home/u/Desktop/cmakeproject/src/serialNetTools/common/myLog.h
+
+/home/u/Desktop/cmakeproject/src/serialNetTools/common/myLog.h
+glog/logging.h
+-
+iostream
+-
+mutex
+-
+string
+-
+
