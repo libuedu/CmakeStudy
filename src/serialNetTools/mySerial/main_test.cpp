@@ -14,7 +14,7 @@ int main(int argc, char **argv)
 
     QCoreApplication app(argc, argv);
 
-    MySerial *mySerial = new MySerial("1", "/dev/ttySO", 115200, 0, 8, 1);
+    MySerial *mySerial = new MySerial("1", "/dev/pts/5", 115200, 0, 8, 1);
     QMetaObject::invokeMethod(mySerial, "slot_start", Qt::QueuedConnection);
 
     return app.exec();

@@ -5,6 +5,7 @@ src/serialNetTools/mySerial/CMakeFiles/mySerial.dir/moc_mySerial.cpp.o
  ../src/serialNetTools/common/myLog.h
  /home/u/Desktop/cmakeproject/build/src/serialNetTools/mySerial/moc_mySerial.cpp
  /home/u/Desktop/cmakeproject/src/serialNetTools/mySerial/mySerial.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QDebug
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QString
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariantMap
@@ -80,6 +81,7 @@ src/serialNetTools/mySerial/CMakeFiles/mySerial.dir/mySerial.cpp.o
  ../src/serialNetTools/common/myLog.h
  /home/u/Desktop/cmakeproject/src/serialNetTools/mySerial/mySerial.cpp
  /home/u/Desktop/cmakeproject/src/serialNetTools/mySerial/mySerial.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QDebug
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QString
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariantMap

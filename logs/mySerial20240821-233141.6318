@@ -1,0 +1,14 @@
+Log file created at: 2024/08/21 23:31:41
+Running on machine: u-virtual-machine
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0821 23:31:41.450168  6318 main_test.cpp:13] mySerial test start.
+I0821 23:31:45.474022  6318 mySerial.cpp:36] serial_data: Hello, serial port!
+I0821 23:31:47.876499  6318 mySerial.cpp:36] serial_data: Hello, serial port!
+I0821 23:31:48.923944  6318 mySerial.cpp:36] serial_data: Hello, serial port!
+I0821 23:31:49.545796  6318 mySerial.cpp:36] serial_data: Hello, serial port!
+I0821 23:31:50.071851  6318 mySerial.cpp:36] serial_data: Hello, serial port!
+I0821 23:31:50.551911  6318 mySerial.cpp:36] serial_data: Hello, serial port!
+I0821 23:31:51.008065  6318 mySerial.cpp:36] serial_data: Hello, serial port!
+I0821 23:31:51.435672  6318 mySerial.cpp:36] serial_data: Hello, serial port!
+I0821 23:31:51.856081  6318 mySerial.cpp:36] serial_data: Hello, serial port!
+I0821 23:31:52.298154  6318 mySerial.cpp:36] serial_data: Hello, serial port!

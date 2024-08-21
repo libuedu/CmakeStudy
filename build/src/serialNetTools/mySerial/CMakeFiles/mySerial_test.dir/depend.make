@@ -6,6 +6,7 @@ src/serialNetTools/mySerial/CMakeFiles/mySerial_test.dir/main_test.cpp.o: ../src
 src/serialNetTools/mySerial/CMakeFiles/mySerial_test.dir/main_test.cpp.o: ../src/serialNetTools/mySerial/main_test.cpp
 src/serialNetTools/mySerial/CMakeFiles/mySerial_test.dir/main_test.cpp.o: ../src/serialNetTools/mySerial/mySerial.h
 src/serialNetTools/mySerial/CMakeFiles/mySerial_test.dir/main_test.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QCoreApplication
+src/serialNetTools/mySerial/CMakeFiles/mySerial_test.dir/main_test.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QDebug
 src/serialNetTools/mySerial/CMakeFiles/mySerial_test.dir/main_test.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject
 src/serialNetTools/mySerial/CMakeFiles/mySerial_test.dir/main_test.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QString
 src/serialNetTools/mySerial/CMakeFiles/mySerial_test.dir/main_test.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariantMap

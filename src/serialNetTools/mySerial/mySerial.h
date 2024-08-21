@@ -6,6 +6,7 @@
 #include <QString>
 #include <QVariantMap>
 #include "myLog.h"
+#include <QDebug>
 
 using namespace std;
 

@@ -123,7 +123,7 @@ bool MySerial::start()
         break;
     }
     // 5.ÉèÖÃÍ£Ö¹Î»
-    switch (dataBit_)
+    switch (stopBit_)
     {
     case 1:
         serialPort_->setStopBits(QSerialPort::OneStop);
