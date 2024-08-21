@@ -1,0 +1,1 @@
+/usr/bin/c++  -w -O2 -g -ggdb -w   CMakeFiles/mySerial_test.dir/main_test.cpp.o  -o ../../../../bin/mySerial_test  -Wl,-rpath,/home/u/Desktop/cmakeproject/lib ../../../../lib/libmySerial.so /usr/lib/x86_64-linux-gnu/libQt5SerialPort.so.5.12.8 /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8 ../../../../lib/libcommon.so -lglog 

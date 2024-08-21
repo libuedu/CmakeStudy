@@ -2,6 +2,7 @@
 -I/home/u/Desktop/cmakeproject/src/serialNetTools/qt_ui
 -I/home/u/Desktop/cmakeproject/src/serialNetTools/SerialNetTools
 -I/home/u/Desktop/cmakeproject/src/serialNetTools/rosNode
+-I/home/u/Desktop/cmakeproject/src/serialNetTools/mySerial
 -I/home/u/Desktop/cmakeproject/build/devel/include
 -I/home/u/Desktop/cmakeproject/src/serialNetTools/qt_ui
 -I/home/u/Desktop/cmakeproject/src/serialNetTools/qt_ui

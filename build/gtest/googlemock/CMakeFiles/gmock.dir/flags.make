@@ -6,5 +6,5 @@ CXX_FLAGS = -w -O2 -g -ggdb -w -fPIC   -Wall -Wshadow -Wno-error=dangling-else -
 
 CXX_DEFINES = -DGTEST_CREATE_SHARED_LIBRARY=1 -Dgmock_EXPORTS
 
-CXX_INCLUDES = -I/home/u/Desktop/cmakeproject/build/gtest/googlemock -I/usr/src/googletest/googlemock -I/home/u/Desktop/cmakeproject/src/serialNetTools/common -I/home/u/Desktop/cmakeproject/src/serialNetTools/qt_ui -I/home/u/Desktop/cmakeproject/src/serialNetTools/SerialNetTools -I/home/u/Desktop/cmakeproject/src/serialNetTools/rosNode -I/home/u/Desktop/cmakeproject/build/devel/include -I/usr/src/googletest/googlemock/include -isystem /usr/src/googletest/googletest/include -isystem /usr/src/googletest/googletest 
+CXX_INCLUDES = -I/home/u/Desktop/cmakeproject/build/gtest/googlemock -I/usr/src/googletest/googlemock -I/home/u/Desktop/cmakeproject/src/serialNetTools/common -I/home/u/Desktop/cmakeproject/src/serialNetTools/qt_ui -I/home/u/Desktop/cmakeproject/src/serialNetTools/SerialNetTools -I/home/u/Desktop/cmakeproject/src/serialNetTools/rosNode -I/home/u/Desktop/cmakeproject/src/serialNetTools/mySerial -I/home/u/Desktop/cmakeproject/build/devel/include -I/usr/src/googletest/googlemock/include -isystem /usr/src/googletest/googletest/include -isystem /usr/src/googletest/googletest 
 

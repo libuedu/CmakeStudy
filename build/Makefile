@@ -716,6 +716,32 @@ serialNetTools/fast:
 .PHONY : serialNetTools/fast
 
 #=============================================================================
+# Target rules for targets named mySerial_test
+
+# Build rule for target.
+mySerial_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 mySerial_test
+.PHONY : mySerial_test
+
+# fast build rule for target.
+mySerial_test/fast:
+	$(MAKE) -f src/serialNetTools/mySerial/CMakeFiles/mySerial_test.dir/build.make src/serialNetTools/mySerial/CMakeFiles/mySerial_test.dir/build
+.PHONY : mySerial_test/fast
+
+#=============================================================================
+# Target rules for targets named mySerial
+
+# Build rule for target.
+mySerial: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 mySerial
+.PHONY : mySerial
+
+# fast build rule for target.
+mySerial/fast:
+	$(MAKE) -f src/serialNetTools/mySerial/CMakeFiles/mySerial.dir/build.make src/serialNetTools/mySerial/CMakeFiles/mySerial.dir/build
+.PHONY : mySerial/fast
+
+#=============================================================================
 # Target rules for targets named myLogTest
 
 # Build rule for target.
@@ -783,6 +809,8 @@ help:
 	@echo "... serialNetTools_test"
 	@echo "... serialNetTools_static"
 	@echo "... serialNetTools"
+	@echo "... mySerial_test"
+	@echo "... mySerial"
 	@echo "... myLogTest"
 .PHONY : help
 

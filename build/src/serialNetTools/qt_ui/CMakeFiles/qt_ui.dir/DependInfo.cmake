@@ -25,6 +25,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../src/serialNetTools/common"
   "../src/serialNetTools/SerialNetTools"
   "../src/serialNetTools/rosNode"
+  "../src/serialNetTools/mySerial"
   "devel/include"
   "/usr/include/x86_64-linux-gnu/qt5"
   "/usr/include/x86_64-linux-gnu/qt5/QtWidgets"

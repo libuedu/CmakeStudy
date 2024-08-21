@@ -19,6 +19,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../src/serialNetTools/CMakeLists.txt"
   "../src/serialNetTools/SerialNetTools/CMakeLists.txt"
   "../src/serialNetTools/common/CMakeLists.txt"
+  "../src/serialNetTools/mySerial/CMakeLists.txt"
   "../src/serialNetTools/qt_ui/CMakeLists.txt"
   "../src/serialNetTools/rosNode/CMakeLists.txt"
   "../src/test/CMakeLists.txt"
@@ -144,6 +145,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QXcbEglIntegrationPlugin.cmake"
   "/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QXcbGlxIntegrationPlugin.cmake"
   "/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QXcbIntegrationPlugin.cmake"
+  "/usr/lib/x86_64-linux-gnu/cmake/Qt5SerialPort/Qt5SerialPortConfig.cmake"
+  "/usr/lib/x86_64-linux-gnu/cmake/Qt5SerialPort/Qt5SerialPortConfigVersion.cmake"
   "/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake"
   "/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake"
   "/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake"
@@ -204,6 +207,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "gtest/googlemock/CMakeFiles/CMakeDirectoryInformation.cmake"
   "gtest/googletest/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/serialNetTools/SerialNetTools/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/serialNetTools/mySerial/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/test/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
@@ -252,5 +256,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "src/serialNetTools/SerialNetTools/CMakeFiles/serialNetTools_test.dir/DependInfo.cmake"
   "src/serialNetTools/SerialNetTools/CMakeFiles/serialNetTools_static.dir/DependInfo.cmake"
   "src/serialNetTools/SerialNetTools/CMakeFiles/serialNetTools.dir/DependInfo.cmake"
+  "src/serialNetTools/mySerial/CMakeFiles/mySerial_test.dir/DependInfo.cmake"
+  "src/serialNetTools/mySerial/CMakeFiles/mySerial.dir/DependInfo.cmake"
   "src/test/CMakeFiles/myLogTest.dir/DependInfo.cmake"
   )

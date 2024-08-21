@@ -44,6 +44,7 @@ include_directories(${PROJECT_SOURCE_DIR}/src/serialNetTools/common)
 include_directories(${PROJECT_SOURCE_DIR}/src/serialNetTools/qt_ui)
 include_directories(${PROJECT_SOURCE_DIR}/src/serialNetTools/SerialNetTools)
 include_directories(${PROJECT_SOURCE_DIR}/src/serialNetTools/rosNode)
+include_directories(${PROJECT_SOURCE_DIR}/src/serialNetTools/mySerial)
 include_directories(${PROJECT_SOURCE_DIR}/build/devel/include)
 
 

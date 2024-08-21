@@ -101,6 +101,14 @@
 /home/u/Desktop/cmakeproject/build/src/serialNetTools/SerialNetTools/CMakeFiles/serialNetTools_test.dir
 /home/u/Desktop/cmakeproject/build/src/serialNetTools/SerialNetTools/CMakeFiles/serialNetTools_static.dir
 /home/u/Desktop/cmakeproject/build/src/serialNetTools/SerialNetTools/CMakeFiles/serialNetTools.dir
+/home/u/Desktop/cmakeproject/build/src/serialNetTools/mySerial/CMakeFiles/install/strip.dir
+/home/u/Desktop/cmakeproject/build/src/serialNetTools/mySerial/CMakeFiles/install/local.dir
+/home/u/Desktop/cmakeproject/build/src/serialNetTools/mySerial/CMakeFiles/install.dir
+/home/u/Desktop/cmakeproject/build/src/serialNetTools/mySerial/CMakeFiles/list_install_components.dir
+/home/u/Desktop/cmakeproject/build/src/serialNetTools/mySerial/CMakeFiles/rebuild_cache.dir
+/home/u/Desktop/cmakeproject/build/src/serialNetTools/mySerial/CMakeFiles/edit_cache.dir
+/home/u/Desktop/cmakeproject/build/src/serialNetTools/mySerial/CMakeFiles/mySerial_test.dir
+/home/u/Desktop/cmakeproject/build/src/serialNetTools/mySerial/CMakeFiles/mySerial.dir
 /home/u/Desktop/cmakeproject/build/src/test/CMakeFiles/install/strip.dir
 /home/u/Desktop/cmakeproject/build/src/test/CMakeFiles/install/local.dir
 /home/u/Desktop/cmakeproject/build/src/test/CMakeFiles/install.dir

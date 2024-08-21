@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -w -O2 -g -ggdb -w  -shared -Wl,-soname,libmySerial.so -o ../../../../lib/libmySerial.so CMakeFiles/mySerial.dir/mySerial.cpp.o CMakeFiles/mySerial.dir/moc_mySerial.cpp.o  -Wl,-rpath,/home/u/Desktop/cmakeproject/lib /usr/lib/x86_64-linux-gnu/libQt5SerialPort.so.5.12.8 ../../../../lib/libcommon.so /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8 -lglog 

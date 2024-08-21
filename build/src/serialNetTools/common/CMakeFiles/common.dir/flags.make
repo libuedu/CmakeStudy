@@ -6,5 +6,5 @@ CXX_FLAGS = -w -O2 -g -ggdb -w -fPIC   -std=gnu++17
 
 CXX_DEFINES = -Dcommon_EXPORTS
 
-CXX_INCLUDES = -I/home/u/Desktop/cmakeproject/src/serialNetTools/common -I/home/u/Desktop/cmakeproject/src/serialNetTools/qt_ui -I/home/u/Desktop/cmakeproject/src/serialNetTools/SerialNetTools -I/home/u/Desktop/cmakeproject/src/serialNetTools/rosNode -I/home/u/Desktop/cmakeproject/build/devel/include 
+CXX_INCLUDES = -I/home/u/Desktop/cmakeproject/src/serialNetTools/common -I/home/u/Desktop/cmakeproject/src/serialNetTools/qt_ui -I/home/u/Desktop/cmakeproject/src/serialNetTools/SerialNetTools -I/home/u/Desktop/cmakeproject/src/serialNetTools/rosNode -I/home/u/Desktop/cmakeproject/src/serialNetTools/mySerial -I/home/u/Desktop/cmakeproject/build/devel/include 
 

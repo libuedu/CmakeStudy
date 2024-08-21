@@ -27,6 +27,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../src/serialNetTools/common"
   "../src/serialNetTools/qt_ui"
   "../src/serialNetTools/SerialNetTools"
+  "../src/serialNetTools/mySerial"
   "devel/include"
   "/opt/ros/noetic/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"

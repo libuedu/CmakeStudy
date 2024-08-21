@@ -67,7 +67,11 @@
     "ostream": "cpp",
     "sstream": "cpp",
     "qvariantmap": "cpp",
-    "qcoreapplication": "cpp"
+    "qcoreapplication": "cpp",
+    "qtserialport": "cpp",
+    "qserialportinfo": "cpp",
+    "qobject": "cpp"
   },
-  "ros.distro": "noetic"
+  "ros.distro": "noetic",
+  "C_Cpp.errorSquiggles": "disabled"
 }

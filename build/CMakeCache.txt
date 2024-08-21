@@ -364,6 +364,9 @@ Qt5Core_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Core
 //The directory containing a CMake configuration file for Qt5Gui.
 Qt5Gui_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui
 
+//The directory containing a CMake configuration file for Qt5SerialPort.
+Qt5SerialPort_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5SerialPort
+
 //The directory containing a CMake configuration file for Qt5Widgets.
 Qt5Widgets_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets
 
@@ -469,6 +472,12 @@ myLogTest_BINARY_DIR:STATIC=/home/u/Desktop/cmakeproject/build/src/test
 
 //Value Computed by CMake
 myLogTest_SOURCE_DIR:STATIC=/home/u/Desktop/cmakeproject/src/test
+
+//Value Computed by CMake
+mySerial_BINARY_DIR:STATIC=/home/u/Desktop/cmakeproject/build/src/serialNetTools/mySerial
+
+//Value Computed by CMake
+mySerial_SOURCE_DIR:STATIC=/home/u/Desktop/cmakeproject/src/serialNetTools/mySerial
 
 //Value Computed by CMake
 qt_ui_BINARY_DIR:STATIC=/home/u/Desktop/cmakeproject/build/src/serialNetTools/qt_ui
@@ -672,7 +681,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=11
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=12
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
