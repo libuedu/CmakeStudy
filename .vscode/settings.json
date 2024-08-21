@@ -66,5 +66,6 @@
     "numeric": "cpp",
     "ostream": "cpp",
     "sstream": "cpp"
-  }
+  },
+  "ros.distro": "noetic"
 }

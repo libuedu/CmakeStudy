@@ -17,7 +17,7 @@ MainWindow::MainWindow(int argc,char** argv, QWidget *parent)
     QObject::connect(&rosNode_,&RosNode::signal_strMsg,this,&MainWindow::slot_send_textEdit);
 
     std::string log_path = common_log_.get_log_path();
-    myLog_ = new MyLog(log_path,"mainWindow");
+    myLog_ = new MyLog(log_path, "mainWindow");
 
     LOG(INFO)<<"mainWindow Log Hello World!!!";
 

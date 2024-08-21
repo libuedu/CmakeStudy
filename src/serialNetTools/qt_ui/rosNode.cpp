@@ -4,14 +4,13 @@
 /**
  * 构造函数
  */
-RosNode::RosNode(int argc,char** argv):init_argc_(argc),init_argv_(argv)
+RosNode::RosNode(int argc, char **argv) : init_argc_(argc), init_argv_(argv)
 {
-
 }
 
 RosNode::~RosNode()
 {
-    if(ros::isStarted())
+    if (ros::isStarted())
     {
         ros::shutdown();
         ros::waitForShutdown();
@@ -24,8 +23,8 @@ RosNode::~RosNode()
  */
 bool RosNode::init()
 {
-    ros::init(init_argc_,init_argv_,"qt_ui");
-    if(!ros::master::check())
+    ros::init(init_argc_, init_argv_, "qt_ui");
+    if (!ros::master::check())
     {
         return false;
     }
@@ -33,9 +32,9 @@ bool RosNode::init()
     ros::NodeHandle n;
     // ros::start();
 
-    //发送和订阅
-    pub_str_msg = n.advertise<std_msgs::String>("/str_msg",10);//发布消息
-    sub_str_msg = n.subscribe("/str_msg",10,&RosNode::callback_strMsg,this);
+    // 发送和订阅
+    pub_str_msg = n.advertise<std_msgs::String>("/str_msg", 10); // 发布消息
+    sub_str_msg = n.subscribe("/str_msg", 10, &RosNode::callback_strMsg, this);
 
     start();
     return true;
@@ -47,18 +46,17 @@ void RosNode::run()
     ros::NodeHandle n;
 
     ros::Rate rate(10);
-    while(ros::ok())
+    while (ros::ok())
     {
-        QCoreApplication::processEvents();//确保Qt的事件循环得到处理
+        QCoreApplication::processEvents(); // 确保Qt的事件循环得到处理
         ros::spinOnce();
         rate.sleep();
     }
 
     Q_EMIT signal_rosShutdown();
-
 }
 
-void RosNode::slot_pubStrMsg(const QString& msg)
+void RosNode::slot_pubStrMsg(const QString &msg)
 {
     std_msgs::String str_msg;
     str_msg.data = msg.toStdString();
