@@ -49,6 +49,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("/home/u/Desktop/cmakeproject/build/src/serialNetTools/rosNode/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("/home/u/Desktop/cmakeproject/build/src/serialNetTools/SerialNetTools/cmake_install.cmake")
 endif()
 

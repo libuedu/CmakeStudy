@@ -43,6 +43,7 @@ set(MY_CMAKE_INSTALL_DIRECTORY ${PROJECT_SOURCE_DIR}/install) # 设置安装目�
 include_directories(${PROJECT_SOURCE_DIR}/src/serialNetTools/common)
 include_directories(${PROJECT_SOURCE_DIR}/src/serialNetTools/qt_ui)
 include_directories(${PROJECT_SOURCE_DIR}/src/serialNetTools/SerialNetTools)
+include_directories(${PROJECT_SOURCE_DIR}/src/serialNetTools/rosNode)
 include_directories(${PROJECT_SOURCE_DIR}/build/devel/include)
 
 

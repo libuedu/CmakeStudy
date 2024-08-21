@@ -209,6 +209,19 @@ qt_ui/fast:
 .PHONY : qt_ui/fast
 
 #=============================================================================
+# Target rules for targets named rosNode
+
+# Build rule for target.
+rosNode: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosNode
+.PHONY : rosNode
+
+# fast build rule for target.
+rosNode/fast:
+	$(MAKE) -f src/serialNetTools/rosNode/CMakeFiles/rosNode.dir/build.make src/serialNetTools/rosNode/CMakeFiles/rosNode.dir/build
+.PHONY : rosNode/fast
+
+#=============================================================================
 # Target rules for targets named rosgraph_msgs_generate_messages_eus
 
 # Build rule for target.
@@ -218,7 +231,7 @@ rosgraph_msgs_generate_messages_eus: cmake_check_build_system
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_eus/fast:
-	$(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
+	$(MAKE) -f src/serialNetTools/rosNode/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make src/serialNetTools/rosNode/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
 .PHONY : rosgraph_msgs_generate_messages_eus/fast
 
 #=============================================================================
@@ -231,7 +244,7 @@ rosgraph_msgs_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+	$(MAKE) -f src/serialNetTools/rosNode/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make src/serialNetTools/rosNode/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
 .PHONY : rosgraph_msgs_generate_messages_cpp/fast
 
 #=============================================================================
@@ -244,7 +257,7 @@ roscpp_generate_messages_nodejs: cmake_check_build_system
 
 # fast build rule for target.
 roscpp_generate_messages_nodejs/fast:
-	$(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
+	$(MAKE) -f src/serialNetTools/rosNode/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make src/serialNetTools/rosNode/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
 .PHONY : roscpp_generate_messages_nodejs/fast
 
 #=============================================================================
@@ -257,7 +270,7 @@ std_msgs_generate_messages_eus: cmake_check_build_system
 
 # fast build rule for target.
 std_msgs_generate_messages_eus/fast:
-	$(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/std_msgs_generate_messages_eus.dir/build
+	$(MAKE) -f src/serialNetTools/rosNode/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make src/serialNetTools/rosNode/CMakeFiles/std_msgs_generate_messages_eus.dir/build
 .PHONY : std_msgs_generate_messages_eus/fast
 
 #=============================================================================
@@ -270,7 +283,7 @@ geometry_msgs_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 geometry_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
+	$(MAKE) -f src/serialNetTools/rosNode/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make src/serialNetTools/rosNode/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
 .PHONY : geometry_msgs_generate_messages_lisp/fast
 
 #=============================================================================
@@ -283,7 +296,7 @@ geometry_msgs_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 geometry_msgs_generate_messages_py/fast:
-	$(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
+	$(MAKE) -f src/serialNetTools/rosNode/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make src/serialNetTools/rosNode/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
 .PHONY : geometry_msgs_generate_messages_py/fast
 
 #=============================================================================
@@ -296,7 +309,7 @@ sensor_msgs_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 sensor_msgs_generate_messages_py/fast:
-	$(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
+	$(MAKE) -f src/serialNetTools/rosNode/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make src/serialNetTools/rosNode/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
 .PHONY : sensor_msgs_generate_messages_py/fast
 
 #=============================================================================
@@ -309,7 +322,7 @@ geometry_msgs_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 geometry_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
+	$(MAKE) -f src/serialNetTools/rosNode/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make src/serialNetTools/rosNode/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
 .PHONY : geometry_msgs_generate_messages_cpp/fast
 
 #=============================================================================
@@ -322,7 +335,7 @@ geometry_msgs_generate_messages_nodejs: cmake_check_build_system
 
 # fast build rule for target.
 geometry_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
+	$(MAKE) -f src/serialNetTools/rosNode/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make src/serialNetTools/rosNode/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
 .PHONY : geometry_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
@@ -335,7 +348,7 @@ roscpp_generate_messages_eus: cmake_check_build_system
 
 # fast build rule for target.
 roscpp_generate_messages_eus/fast:
-	$(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/roscpp_generate_messages_eus.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/roscpp_generate_messages_eus.dir/build
+	$(MAKE) -f src/serialNetTools/rosNode/CMakeFiles/roscpp_generate_messages_eus.dir/build.make src/serialNetTools/rosNode/CMakeFiles/roscpp_generate_messages_eus.dir/build
 .PHONY : roscpp_generate_messages_eus/fast
 
 #=============================================================================
@@ -348,7 +361,7 @@ sensor_msgs_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 sensor_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
+	$(MAKE) -f src/serialNetTools/rosNode/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make src/serialNetTools/rosNode/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
 .PHONY : sensor_msgs_generate_messages_lisp/fast
 
 #=============================================================================
@@ -361,7 +374,7 @@ sensor_msgs_generate_messages_nodejs: cmake_check_build_system
 
 # fast build rule for target.
 sensor_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
+	$(MAKE) -f src/serialNetTools/rosNode/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make src/serialNetTools/rosNode/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
 .PHONY : sensor_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
@@ -374,7 +387,7 @@ roscpp_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 roscpp_generate_messages_py/fast:
-	$(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/roscpp_generate_messages_py.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/roscpp_generate_messages_py.dir/build
+	$(MAKE) -f src/serialNetTools/rosNode/CMakeFiles/roscpp_generate_messages_py.dir/build.make src/serialNetTools/rosNode/CMakeFiles/roscpp_generate_messages_py.dir/build
 .PHONY : roscpp_generate_messages_py/fast
 
 #=============================================================================
@@ -387,7 +400,7 @@ roscpp_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 roscpp_generate_messages_cpp/fast:
-	$(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/roscpp_generate_messages_cpp.dir/build
+	$(MAKE) -f src/serialNetTools/rosNode/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make src/serialNetTools/rosNode/CMakeFiles/roscpp_generate_messages_cpp.dir/build
 .PHONY : roscpp_generate_messages_cpp/fast
 
 #=============================================================================
@@ -400,7 +413,7 @@ sensor_msgs_generate_messages_eus: cmake_check_build_system
 
 # fast build rule for target.
 sensor_msgs_generate_messages_eus/fast:
-	$(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
+	$(MAKE) -f src/serialNetTools/rosNode/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make src/serialNetTools/rosNode/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
 .PHONY : sensor_msgs_generate_messages_eus/fast
 
 #=============================================================================
@@ -413,7 +426,7 @@ rosgraph_msgs_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_py/fast:
-	$(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+	$(MAKE) -f src/serialNetTools/rosNode/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make src/serialNetTools/rosNode/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
 .PHONY : rosgraph_msgs_generate_messages_py/fast
 
 #=============================================================================
@@ -426,7 +439,7 @@ doxygen: cmake_check_build_system
 
 # fast build rule for target.
 doxygen/fast:
-	$(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/doxygen.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/doxygen.dir/build
+	$(MAKE) -f src/serialNetTools/rosNode/CMakeFiles/doxygen.dir/build.make src/serialNetTools/rosNode/CMakeFiles/doxygen.dir/build
 .PHONY : doxygen/fast
 
 #=============================================================================
@@ -439,7 +452,7 @@ rosgraph_msgs_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
+	$(MAKE) -f src/serialNetTools/rosNode/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make src/serialNetTools/rosNode/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
 .PHONY : rosgraph_msgs_generate_messages_lisp/fast
 
 #=============================================================================
@@ -452,7 +465,7 @@ download_extra_data: cmake_check_build_system
 
 # fast build rule for target.
 download_extra_data/fast:
-	$(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/download_extra_data.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/download_extra_data.dir/build
+	$(MAKE) -f src/serialNetTools/rosNode/CMakeFiles/download_extra_data.dir/build.make src/serialNetTools/rosNode/CMakeFiles/download_extra_data.dir/build
 .PHONY : download_extra_data/fast
 
 #=============================================================================
@@ -465,7 +478,7 @@ run_tests: cmake_check_build_system
 
 # fast build rule for target.
 run_tests/fast:
-	$(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/run_tests.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/run_tests.dir/build
+	$(MAKE) -f src/serialNetTools/rosNode/CMakeFiles/run_tests.dir/build.make src/serialNetTools/rosNode/CMakeFiles/run_tests.dir/build
 .PHONY : run_tests/fast
 
 #=============================================================================
@@ -478,7 +491,7 @@ std_msgs_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 std_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+	$(MAKE) -f src/serialNetTools/rosNode/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make src/serialNetTools/rosNode/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
 .PHONY : std_msgs_generate_messages_lisp/fast
 
 #=============================================================================
@@ -491,7 +504,7 @@ roscpp_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 roscpp_generate_messages_lisp/fast:
-	$(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/roscpp_generate_messages_lisp.dir/build
+	$(MAKE) -f src/serialNetTools/rosNode/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make src/serialNetTools/rosNode/CMakeFiles/roscpp_generate_messages_lisp.dir/build
 .PHONY : roscpp_generate_messages_lisp/fast
 
 #=============================================================================
@@ -504,7 +517,7 @@ clean_test_results: cmake_check_build_system
 
 # fast build rule for target.
 clean_test_results/fast:
-	$(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/clean_test_results.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/clean_test_results.dir/build
+	$(MAKE) -f src/serialNetTools/rosNode/CMakeFiles/clean_test_results.dir/build.make src/serialNetTools/rosNode/CMakeFiles/clean_test_results.dir/build
 .PHONY : clean_test_results/fast
 
 #=============================================================================
@@ -517,7 +530,7 @@ tests: cmake_check_build_system
 
 # fast build rule for target.
 tests/fast:
-	$(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/tests.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/tests.dir/build
+	$(MAKE) -f src/serialNetTools/rosNode/CMakeFiles/tests.dir/build.make src/serialNetTools/rosNode/CMakeFiles/tests.dir/build
 .PHONY : tests/fast
 
 #=============================================================================
@@ -530,7 +543,7 @@ rosgraph_msgs_generate_messages_nodejs: cmake_check_build_system
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
+	$(MAKE) -f src/serialNetTools/rosNode/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make src/serialNetTools/rosNode/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
 .PHONY : rosgraph_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
@@ -543,7 +556,7 @@ std_msgs_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 std_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+	$(MAKE) -f src/serialNetTools/rosNode/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make src/serialNetTools/rosNode/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
 .PHONY : std_msgs_generate_messages_cpp/fast
 
 #=============================================================================
@@ -556,7 +569,7 @@ std_msgs_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 std_msgs_generate_messages_py/fast:
-	$(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/std_msgs_generate_messages_py.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/std_msgs_generate_messages_py.dir/build
+	$(MAKE) -f src/serialNetTools/rosNode/CMakeFiles/std_msgs_generate_messages_py.dir/build.make src/serialNetTools/rosNode/CMakeFiles/std_msgs_generate_messages_py.dir/build
 .PHONY : std_msgs_generate_messages_py/fast
 
 #=============================================================================
@@ -569,8 +582,21 @@ sensor_msgs_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 sensor_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
+	$(MAKE) -f src/serialNetTools/rosNode/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make src/serialNetTools/rosNode/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
 .PHONY : sensor_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named rosNode_test
+
+# Build rule for target.
+rosNode_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosNode_test
+.PHONY : rosNode_test
+
+# fast build rule for target.
+rosNode_test/fast:
+	$(MAKE) -f src/serialNetTools/rosNode/CMakeFiles/rosNode_test.dir/build.make src/serialNetTools/rosNode/CMakeFiles/rosNode_test.dir/build
+.PHONY : rosNode_test/fast
 
 #=============================================================================
 # Target rules for targets named std_msgs_generate_messages_nodejs
@@ -582,7 +608,7 @@ std_msgs_generate_messages_nodejs: cmake_check_build_system
 
 # fast build rule for target.
 std_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
+	$(MAKE) -f src/serialNetTools/rosNode/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make src/serialNetTools/rosNode/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
 .PHONY : std_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
@@ -595,7 +621,7 @@ geometry_msgs_generate_messages_eus: cmake_check_build_system
 
 # fast build rule for target.
 geometry_msgs_generate_messages_eus/fast:
-	$(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
+	$(MAKE) -f src/serialNetTools/rosNode/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make src/serialNetTools/rosNode/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
 .PHONY : geometry_msgs_generate_messages_eus/fast
 
 #=============================================================================
@@ -718,6 +744,7 @@ help:
 	@echo "... common"
 	@echo "... qt_ui_test"
 	@echo "... qt_ui"
+	@echo "... rosNode"
 	@echo "... rosgraph_msgs_generate_messages_eus"
 	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_nodejs"
@@ -746,6 +773,7 @@ help:
 	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... sensor_msgs_generate_messages_cpp"
+	@echo "... rosNode_test"
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... geometry_msgs_generate_messages_eus"
 	@echo "... gmock_main"

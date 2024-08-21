@@ -15,6 +15,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../src/serialNetTools/common"
   "../src/serialNetTools/qt_ui"
   "../src/serialNetTools/SerialNetTools"
+  "../src/serialNetTools/rosNode"
   "devel/include"
   "../src/test/../../install/include"
   )

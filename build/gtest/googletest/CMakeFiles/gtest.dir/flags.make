@@ -6,5 +6,5 @@ CXX_FLAGS = -w -O2 -g -ggdb -w -fPIC   -Wall -Wshadow -Wno-error=dangling-else -
 
 CXX_DEFINES = -DGTEST_CREATE_SHARED_LIBRARY=1 -Dgtest_EXPORTS
 
-CXX_INCLUDES = -I/home/u/Desktop/cmakeproject/build/gtest/googletest -I/usr/src/googletest/googletest -I/home/u/Desktop/cmakeproject/src/serialNetTools/common -I/home/u/Desktop/cmakeproject/src/serialNetTools/qt_ui -I/home/u/Desktop/cmakeproject/src/serialNetTools/SerialNetTools -I/home/u/Desktop/cmakeproject/build/devel/include -I/usr/src/googletest/googletest/include 
+CXX_INCLUDES = -I/home/u/Desktop/cmakeproject/build/gtest/googletest -I/usr/src/googletest/googletest -I/home/u/Desktop/cmakeproject/src/serialNetTools/common -I/home/u/Desktop/cmakeproject/src/serialNetTools/qt_ui -I/home/u/Desktop/cmakeproject/src/serialNetTools/SerialNetTools -I/home/u/Desktop/cmakeproject/src/serialNetTools/rosNode -I/home/u/Desktop/cmakeproject/build/devel/include -I/usr/src/googletest/googletest/include 
 

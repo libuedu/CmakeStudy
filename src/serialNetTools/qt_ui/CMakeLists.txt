@@ -52,14 +52,6 @@ message(STATUS "CMAKE_CURRENT_SOURCE_DIR = ${CMAKE_CURRENT_SOURCE_DIR}")
 #************************
 find_package(Qt5 COMPONENTS Widgets Core REQUIRED)
 
-#导入ROS
-find_package(catkin REQUIRED COMPONENTS
-       roscpp
-       rospy
-       std_msgs
-       sensor_msgs
-       )
-include_directories(${catkin_INCLUDE_DIRS})
 
 #************************
 # 添加源文件
@@ -74,7 +66,7 @@ file(GLOB QT_FORMS RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} *.ui)
 file(GLOB QT_RESOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} *.qrc)
 file(GLOB_RECURSE QT_MOC RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} FOLLOW_SYMLINKS *.h)
 # file(GLOB_RECURSE QT_SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} FOLLOW_SYMLINKS *.cpp)
-set(QT_SOURCES mainwindow.cpp rosNode.cpp)
+set(QT_SOURCES mainwindow.cpp)
 
 #三个用于处理Qt特定资源和代码生成的命令
 QT5_WRAP_UI(QT_FORMS_HPP ${QT_FORMS}) #从 .ui 文件自动生成用户界面类的头文件和源文件
@@ -97,7 +89,7 @@ add_library(${PROJECT_NAME} SHARED  ${QT_SOURCES}
                                     ${QT_RESOURCES_CPP} 
                                     ${QT_FORMS_HPP} 
                                     ${QT_MOC_HPP})
-target_link_libraries(${PROJECT_NAME} Qt5::Widgets ${catkin_LIBRARIES} common)
+target_link_libraries(${PROJECT_NAME} Qt5::Widgets common)
 
 
 
@@ -134,19 +126,19 @@ set_target_properties(${PROJECT_NAME}  PROPERTIES
   INSTALL_RPATH "$ORIGIN/../lib")
 
 # 安装目标
-install(
-  TARGETS ${PROJECT_NAME}_test ${PROJECT_NAME} common 
-  EXPORT FindQtUi
-  RUNTIME DESTINATION ${MY_CMAKE_INSTALL_DIRECTORY}/bin
-  LIBRARY DESTINATION ${MY_CMAKE_INSTALL_DIRECTORY}/lib
-  ARCHIVE DESTINATION ${MY_CMAKE_INSTALL_DIRECTORY}/lib
-)
+# install(
+#   TARGETS ${PROJECT_NAME}_test ${PROJECT_NAME} common 
+#   EXPORT FindQtUi
+#   RUNTIME DESTINATION ${MY_CMAKE_INSTALL_DIRECTORY}/bin
+#   LIBRARY DESTINATION ${MY_CMAKE_INSTALL_DIRECTORY}/lib
+#   ARCHIVE DESTINATION ${MY_CMAKE_INSTALL_DIRECTORY}/lib
+# )
 
-#头文件
-install(FILES mainwindow.h rosNode.h ../common/myLog.h ../common/common.h
-        DESTINATION ${MY_CMAKE_INSTALL_DIRECTORY}/include) # 对于头文件
+# #头文件
+# install(FILES mainwindow.h ../common/myLog.h ../common/common.h
+#         DESTINATION ${MY_CMAKE_INSTALL_DIRECTORY}/include) # 对于头文件
 
-# 安装导出集，这样其他项目可以使用find_package来找到my_library
-install(EXPORT FindQtUi
-       FILE FindQtUi.cmake
-       DESTINATION ${MY_CMAKE_INSTALL_DIRECTORY})     
+# # 安装导出集，这样其他项目可以使用find_package来找到my_library
+# install(EXPORT FindQtUi
+#        FILE FindQtUi.cmake
+#        DESTINATION ${MY_CMAKE_INSTALL_DIRECTORY})     

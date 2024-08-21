@@ -83,23 +83,6 @@ qt_ui_test_EXTERNAL_OBJECTS =
 ../bin/qt_ui_test: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8
 ../bin/qt_ui_test: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8
 ../bin/qt_ui_test: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8
-../bin/qt_ui_test: /opt/ros/noetic/lib/libroscpp.so
-../bin/qt_ui_test: /usr/lib/x86_64-linux-gnu/libpthread.so
-../bin/qt_ui_test: /usr/lib/x86_64-linux-gnu/libboost_chrono.so.1.71.0
-../bin/qt_ui_test: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0
-../bin/qt_ui_test: /opt/ros/noetic/lib/librosconsole.so
-../bin/qt_ui_test: /opt/ros/noetic/lib/librosconsole_log4cxx.so
-../bin/qt_ui_test: /opt/ros/noetic/lib/librosconsole_backend_interface.so
-../bin/qt_ui_test: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
-../bin/qt_ui_test: /usr/lib/x86_64-linux-gnu/libboost_regex.so.1.71.0
-../bin/qt_ui_test: /opt/ros/noetic/lib/libxmlrpcpp.so
-../bin/qt_ui_test: /opt/ros/noetic/lib/libroscpp_serialization.so
-../bin/qt_ui_test: /opt/ros/noetic/lib/librostime.so
-../bin/qt_ui_test: /usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.71.0
-../bin/qt_ui_test: /opt/ros/noetic/lib/libcpp_common.so
-../bin/qt_ui_test: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0
-../bin/qt_ui_test: /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0
-../bin/qt_ui_test: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
 ../bin/qt_ui_test: ../lib/libcommon.so
 ../bin/qt_ui_test: src/serialNetTools/qt_ui/CMakeFiles/qt_ui_test.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/u/Desktop/cmakeproject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../../../bin/qt_ui_test"

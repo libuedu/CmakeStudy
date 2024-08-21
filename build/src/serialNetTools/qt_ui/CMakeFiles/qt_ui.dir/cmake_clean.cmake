@@ -3,10 +3,7 @@ file(REMOVE_RECURSE
   "../../../../lib/libqt_ui.so"
   "CMakeFiles/qt_ui.dir/mainwindow.cpp.o"
   "CMakeFiles/qt_ui.dir/moc_mainwindow.cpp.o"
-  "CMakeFiles/qt_ui.dir/moc_rosNode.cpp.o"
-  "CMakeFiles/qt_ui.dir/rosNode.cpp.o"
   "moc_mainwindow.cpp"
-  "moc_rosNode.cpp"
   "ui_mainwindow.h"
 )
 

@@ -20,6 +20,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/u/Desktop/cmakeproject/src/serialNetTools/common"
   "/home/u/Desktop/cmakeproject/src/serialNetTools/qt_ui"
   "/home/u/Desktop/cmakeproject/src/serialNetTools/SerialNetTools"
+  "/home/u/Desktop/cmakeproject/src/serialNetTools/rosNode"
   "devel/include"
   "/usr/src/googletest/googlemock"
   "/usr/src/googletest/googlemock/include"

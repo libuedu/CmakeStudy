@@ -65,13 +65,9 @@ src/serialNetTools/qt_ui/moc_mainwindow.cpp: ../src/serialNetTools/qt_ui/mainwin
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/u/Desktop/cmakeproject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating moc_mainwindow.cpp"
 	cd /home/u/Desktop/cmakeproject/build/src/serialNetTools/qt_ui && /usr/lib/qt5/bin/moc @/home/u/Desktop/cmakeproject/build/src/serialNetTools/qt_ui/moc_mainwindow.cpp_parameters
 
-src/serialNetTools/qt_ui/moc_rosNode.cpp: ../src/serialNetTools/qt_ui/rosNode.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/u/Desktop/cmakeproject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating moc_rosNode.cpp"
-	cd /home/u/Desktop/cmakeproject/build/src/serialNetTools/qt_ui && /usr/lib/qt5/bin/moc @/home/u/Desktop/cmakeproject/build/src/serialNetTools/qt_ui/moc_rosNode.cpp_parameters
-
 src/serialNetTools/qt_ui/CMakeFiles/qt_ui.dir/mainwindow.cpp.o: src/serialNetTools/qt_ui/CMakeFiles/qt_ui.dir/flags.make
 src/serialNetTools/qt_ui/CMakeFiles/qt_ui.dir/mainwindow.cpp.o: ../src/serialNetTools/qt_ui/mainwindow.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/u/Desktop/cmakeproject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/serialNetTools/qt_ui/CMakeFiles/qt_ui.dir/mainwindow.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/u/Desktop/cmakeproject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/serialNetTools/qt_ui/CMakeFiles/qt_ui.dir/mainwindow.cpp.o"
 	cd /home/u/Desktop/cmakeproject/build/src/serialNetTools/qt_ui && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/qt_ui.dir/mainwindow.cpp.o -c /home/u/Desktop/cmakeproject/src/serialNetTools/qt_ui/mainwindow.cpp
 
 src/serialNetTools/qt_ui/CMakeFiles/qt_ui.dir/mainwindow.cpp.i: cmake_force
@@ -82,22 +78,9 @@ src/serialNetTools/qt_ui/CMakeFiles/qt_ui.dir/mainwindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/qt_ui.dir/mainwindow.cpp.s"
 	cd /home/u/Desktop/cmakeproject/build/src/serialNetTools/qt_ui && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/u/Desktop/cmakeproject/src/serialNetTools/qt_ui/mainwindow.cpp -o CMakeFiles/qt_ui.dir/mainwindow.cpp.s
 
-src/serialNetTools/qt_ui/CMakeFiles/qt_ui.dir/rosNode.cpp.o: src/serialNetTools/qt_ui/CMakeFiles/qt_ui.dir/flags.make
-src/serialNetTools/qt_ui/CMakeFiles/qt_ui.dir/rosNode.cpp.o: ../src/serialNetTools/qt_ui/rosNode.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/u/Desktop/cmakeproject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/serialNetTools/qt_ui/CMakeFiles/qt_ui.dir/rosNode.cpp.o"
-	cd /home/u/Desktop/cmakeproject/build/src/serialNetTools/qt_ui && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/qt_ui.dir/rosNode.cpp.o -c /home/u/Desktop/cmakeproject/src/serialNetTools/qt_ui/rosNode.cpp
-
-src/serialNetTools/qt_ui/CMakeFiles/qt_ui.dir/rosNode.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/qt_ui.dir/rosNode.cpp.i"
-	cd /home/u/Desktop/cmakeproject/build/src/serialNetTools/qt_ui && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/u/Desktop/cmakeproject/src/serialNetTools/qt_ui/rosNode.cpp > CMakeFiles/qt_ui.dir/rosNode.cpp.i
-
-src/serialNetTools/qt_ui/CMakeFiles/qt_ui.dir/rosNode.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/qt_ui.dir/rosNode.cpp.s"
-	cd /home/u/Desktop/cmakeproject/build/src/serialNetTools/qt_ui && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/u/Desktop/cmakeproject/src/serialNetTools/qt_ui/rosNode.cpp -o CMakeFiles/qt_ui.dir/rosNode.cpp.s
-
 src/serialNetTools/qt_ui/CMakeFiles/qt_ui.dir/moc_mainwindow.cpp.o: src/serialNetTools/qt_ui/CMakeFiles/qt_ui.dir/flags.make
 src/serialNetTools/qt_ui/CMakeFiles/qt_ui.dir/moc_mainwindow.cpp.o: src/serialNetTools/qt_ui/moc_mainwindow.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/u/Desktop/cmakeproject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/serialNetTools/qt_ui/CMakeFiles/qt_ui.dir/moc_mainwindow.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/u/Desktop/cmakeproject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/serialNetTools/qt_ui/CMakeFiles/qt_ui.dir/moc_mainwindow.cpp.o"
 	cd /home/u/Desktop/cmakeproject/build/src/serialNetTools/qt_ui && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/qt_ui.dir/moc_mainwindow.cpp.o -c /home/u/Desktop/cmakeproject/build/src/serialNetTools/qt_ui/moc_mainwindow.cpp
 
 src/serialNetTools/qt_ui/CMakeFiles/qt_ui.dir/moc_mainwindow.cpp.i: cmake_force
@@ -108,57 +91,23 @@ src/serialNetTools/qt_ui/CMakeFiles/qt_ui.dir/moc_mainwindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/qt_ui.dir/moc_mainwindow.cpp.s"
 	cd /home/u/Desktop/cmakeproject/build/src/serialNetTools/qt_ui && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/u/Desktop/cmakeproject/build/src/serialNetTools/qt_ui/moc_mainwindow.cpp -o CMakeFiles/qt_ui.dir/moc_mainwindow.cpp.s
 
-src/serialNetTools/qt_ui/CMakeFiles/qt_ui.dir/moc_rosNode.cpp.o: src/serialNetTools/qt_ui/CMakeFiles/qt_ui.dir/flags.make
-src/serialNetTools/qt_ui/CMakeFiles/qt_ui.dir/moc_rosNode.cpp.o: src/serialNetTools/qt_ui/moc_rosNode.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/u/Desktop/cmakeproject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/serialNetTools/qt_ui/CMakeFiles/qt_ui.dir/moc_rosNode.cpp.o"
-	cd /home/u/Desktop/cmakeproject/build/src/serialNetTools/qt_ui && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/qt_ui.dir/moc_rosNode.cpp.o -c /home/u/Desktop/cmakeproject/build/src/serialNetTools/qt_ui/moc_rosNode.cpp
-
-src/serialNetTools/qt_ui/CMakeFiles/qt_ui.dir/moc_rosNode.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/qt_ui.dir/moc_rosNode.cpp.i"
-	cd /home/u/Desktop/cmakeproject/build/src/serialNetTools/qt_ui && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/u/Desktop/cmakeproject/build/src/serialNetTools/qt_ui/moc_rosNode.cpp > CMakeFiles/qt_ui.dir/moc_rosNode.cpp.i
-
-src/serialNetTools/qt_ui/CMakeFiles/qt_ui.dir/moc_rosNode.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/qt_ui.dir/moc_rosNode.cpp.s"
-	cd /home/u/Desktop/cmakeproject/build/src/serialNetTools/qt_ui && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/u/Desktop/cmakeproject/build/src/serialNetTools/qt_ui/moc_rosNode.cpp -o CMakeFiles/qt_ui.dir/moc_rosNode.cpp.s
-
 # Object files for target qt_ui
 qt_ui_OBJECTS = \
 "CMakeFiles/qt_ui.dir/mainwindow.cpp.o" \
-"CMakeFiles/qt_ui.dir/rosNode.cpp.o" \
-"CMakeFiles/qt_ui.dir/moc_mainwindow.cpp.o" \
-"CMakeFiles/qt_ui.dir/moc_rosNode.cpp.o"
+"CMakeFiles/qt_ui.dir/moc_mainwindow.cpp.o"
 
 # External object files for target qt_ui
 qt_ui_EXTERNAL_OBJECTS =
 
 ../lib/libqt_ui.so: src/serialNetTools/qt_ui/CMakeFiles/qt_ui.dir/mainwindow.cpp.o
-../lib/libqt_ui.so: src/serialNetTools/qt_ui/CMakeFiles/qt_ui.dir/rosNode.cpp.o
 ../lib/libqt_ui.so: src/serialNetTools/qt_ui/CMakeFiles/qt_ui.dir/moc_mainwindow.cpp.o
-../lib/libqt_ui.so: src/serialNetTools/qt_ui/CMakeFiles/qt_ui.dir/moc_rosNode.cpp.o
 ../lib/libqt_ui.so: src/serialNetTools/qt_ui/CMakeFiles/qt_ui.dir/build.make
 ../lib/libqt_ui.so: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8
-../lib/libqt_ui.so: /opt/ros/noetic/lib/libroscpp.so
-../lib/libqt_ui.so: /usr/lib/x86_64-linux-gnu/libpthread.so
-../lib/libqt_ui.so: /usr/lib/x86_64-linux-gnu/libboost_chrono.so.1.71.0
-../lib/libqt_ui.so: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0
-../lib/libqt_ui.so: /opt/ros/noetic/lib/librosconsole.so
-../lib/libqt_ui.so: /opt/ros/noetic/lib/librosconsole_log4cxx.so
-../lib/libqt_ui.so: /opt/ros/noetic/lib/librosconsole_backend_interface.so
-../lib/libqt_ui.so: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
-../lib/libqt_ui.so: /usr/lib/x86_64-linux-gnu/libboost_regex.so.1.71.0
-../lib/libqt_ui.so: /opt/ros/noetic/lib/libxmlrpcpp.so
-../lib/libqt_ui.so: /opt/ros/noetic/lib/libroscpp_serialization.so
-../lib/libqt_ui.so: /opt/ros/noetic/lib/librostime.so
-../lib/libqt_ui.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.71.0
-../lib/libqt_ui.so: /opt/ros/noetic/lib/libcpp_common.so
-../lib/libqt_ui.so: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0
-../lib/libqt_ui.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0
-../lib/libqt_ui.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
 ../lib/libqt_ui.so: ../lib/libcommon.so
 ../lib/libqt_ui.so: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8
 ../lib/libqt_ui.so: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8
 ../lib/libqt_ui.so: src/serialNetTools/qt_ui/CMakeFiles/qt_ui.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/u/Desktop/cmakeproject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX shared library ../../../../lib/libqt_ui.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/u/Desktop/cmakeproject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX shared library ../../../../lib/libqt_ui.so"
 	cd /home/u/Desktop/cmakeproject/build/src/serialNetTools/qt_ui && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/qt_ui.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -172,7 +121,6 @@ src/serialNetTools/qt_ui/CMakeFiles/qt_ui.dir/clean:
 
 src/serialNetTools/qt_ui/CMakeFiles/qt_ui.dir/depend: src/serialNetTools/qt_ui/ui_mainwindow.h
 src/serialNetTools/qt_ui/CMakeFiles/qt_ui.dir/depend: src/serialNetTools/qt_ui/moc_mainwindow.cpp
-src/serialNetTools/qt_ui/CMakeFiles/qt_ui.dir/depend: src/serialNetTools/qt_ui/moc_rosNode.cpp
 	cd /home/u/Desktop/cmakeproject/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/u/Desktop/cmakeproject /home/u/Desktop/cmakeproject/src/serialNetTools/qt_ui /home/u/Desktop/cmakeproject/build /home/u/Desktop/cmakeproject/build/src/serialNetTools/qt_ui /home/u/Desktop/cmakeproject/build/src/serialNetTools/qt_ui/CMakeFiles/qt_ui.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/serialNetTools/qt_ui/CMakeFiles/qt_ui.dir/depend
 

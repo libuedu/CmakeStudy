@@ -68,27 +68,6 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -101,17 +80,15 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
 
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -123,6 +100,29 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -185,456 +185,6 @@ qt_ui: src/serialNetTools/qt_ui/CMakeFiles/qt_ui.dir/rule
 qt_ui/fast:
 	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/qt_ui.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/qt_ui.dir/build
 .PHONY : qt_ui/fast
-
-# Convenience name for target.
-src/serialNetTools/qt_ui/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f CMakeFiles/Makefile2 src/serialNetTools/qt_ui/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
-.PHONY : src/serialNetTools/qt_ui/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_eus: src/serialNetTools/qt_ui/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_eus
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_eus/fast:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
-.PHONY : rosgraph_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-src/serialNetTools/qt_ui/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f CMakeFiles/Makefile2 src/serialNetTools/qt_ui/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-.PHONY : src/serialNetTools/qt_ui/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_cpp: src/serialNetTools/qt_ui/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_cpp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_cpp/fast:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-src/serialNetTools/qt_ui/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f CMakeFiles/Makefile2 src/serialNetTools/qt_ui/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-.PHONY : src/serialNetTools/qt_ui/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_nodejs: src/serialNetTools/qt_ui/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-
-.PHONY : roscpp_generate_messages_nodejs
-
-# fast build rule for target.
-roscpp_generate_messages_nodejs/fast:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
-.PHONY : roscpp_generate_messages_nodejs/fast
-
-# Convenience name for target.
-src/serialNetTools/qt_ui/CMakeFiles/std_msgs_generate_messages_eus.dir/rule:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f CMakeFiles/Makefile2 src/serialNetTools/qt_ui/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-.PHONY : src/serialNetTools/qt_ui/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_eus: src/serialNetTools/qt_ui/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-
-.PHONY : std_msgs_generate_messages_eus
-
-# fast build rule for target.
-std_msgs_generate_messages_eus/fast:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/std_msgs_generate_messages_eus.dir/build
-.PHONY : std_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-src/serialNetTools/qt_ui/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f CMakeFiles/Makefile2 src/serialNetTools/qt_ui/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
-.PHONY : src/serialNetTools/qt_ui/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_lisp: src/serialNetTools/qt_ui/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_lisp
-
-# fast build rule for target.
-geometry_msgs_generate_messages_lisp/fast:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
-.PHONY : geometry_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-src/serialNetTools/qt_ui/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f CMakeFiles/Makefile2 src/serialNetTools/qt_ui/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-.PHONY : src/serialNetTools/qt_ui/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_py: src/serialNetTools/qt_ui/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_py
-
-# fast build rule for target.
-geometry_msgs_generate_messages_py/fast:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
-.PHONY : geometry_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-src/serialNetTools/qt_ui/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f CMakeFiles/Makefile2 src/serialNetTools/qt_ui/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
-.PHONY : src/serialNetTools/qt_ui/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_py: src/serialNetTools/qt_ui/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
-
-.PHONY : sensor_msgs_generate_messages_py
-
-# fast build rule for target.
-sensor_msgs_generate_messages_py/fast:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
-.PHONY : sensor_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-src/serialNetTools/qt_ui/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f CMakeFiles/Makefile2 src/serialNetTools/qt_ui/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-.PHONY : src/serialNetTools/qt_ui/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_cpp: src/serialNetTools/qt_ui/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_cpp
-
-# fast build rule for target.
-geometry_msgs_generate_messages_cpp/fast:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
-.PHONY : geometry_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-src/serialNetTools/qt_ui/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f CMakeFiles/Makefile2 src/serialNetTools/qt_ui/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
-.PHONY : src/serialNetTools/qt_ui/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_nodejs: src/serialNetTools/qt_ui/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-geometry_msgs_generate_messages_nodejs/fast:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
-.PHONY : geometry_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-src/serialNetTools/qt_ui/CMakeFiles/roscpp_generate_messages_eus.dir/rule:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f CMakeFiles/Makefile2 src/serialNetTools/qt_ui/CMakeFiles/roscpp_generate_messages_eus.dir/rule
-.PHONY : src/serialNetTools/qt_ui/CMakeFiles/roscpp_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_eus: src/serialNetTools/qt_ui/CMakeFiles/roscpp_generate_messages_eus.dir/rule
-
-.PHONY : roscpp_generate_messages_eus
-
-# fast build rule for target.
-roscpp_generate_messages_eus/fast:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/roscpp_generate_messages_eus.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/roscpp_generate_messages_eus.dir/build
-.PHONY : roscpp_generate_messages_eus/fast
-
-# Convenience name for target.
-src/serialNetTools/qt_ui/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f CMakeFiles/Makefile2 src/serialNetTools/qt_ui/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
-.PHONY : src/serialNetTools/qt_ui/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_lisp: src/serialNetTools/qt_ui/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : sensor_msgs_generate_messages_lisp
-
-# fast build rule for target.
-sensor_msgs_generate_messages_lisp/fast:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
-.PHONY : sensor_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-src/serialNetTools/qt_ui/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f CMakeFiles/Makefile2 src/serialNetTools/qt_ui/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
-.PHONY : src/serialNetTools/qt_ui/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_nodejs: src/serialNetTools/qt_ui/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : sensor_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-sensor_msgs_generate_messages_nodejs/fast:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
-.PHONY : sensor_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-src/serialNetTools/qt_ui/CMakeFiles/roscpp_generate_messages_py.dir/rule:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f CMakeFiles/Makefile2 src/serialNetTools/qt_ui/CMakeFiles/roscpp_generate_messages_py.dir/rule
-.PHONY : src/serialNetTools/qt_ui/CMakeFiles/roscpp_generate_messages_py.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_py: src/serialNetTools/qt_ui/CMakeFiles/roscpp_generate_messages_py.dir/rule
-
-.PHONY : roscpp_generate_messages_py
-
-# fast build rule for target.
-roscpp_generate_messages_py/fast:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/roscpp_generate_messages_py.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/roscpp_generate_messages_py.dir/build
-.PHONY : roscpp_generate_messages_py/fast
-
-# Convenience name for target.
-src/serialNetTools/qt_ui/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f CMakeFiles/Makefile2 src/serialNetTools/qt_ui/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-.PHONY : src/serialNetTools/qt_ui/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_cpp: src/serialNetTools/qt_ui/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-
-.PHONY : roscpp_generate_messages_cpp
-
-# fast build rule for target.
-roscpp_generate_messages_cpp/fast:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/roscpp_generate_messages_cpp.dir/build
-.PHONY : roscpp_generate_messages_cpp/fast
-
-# Convenience name for target.
-src/serialNetTools/qt_ui/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f CMakeFiles/Makefile2 src/serialNetTools/qt_ui/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
-.PHONY : src/serialNetTools/qt_ui/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_eus: src/serialNetTools/qt_ui/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
-
-.PHONY : sensor_msgs_generate_messages_eus
-
-# fast build rule for target.
-sensor_msgs_generate_messages_eus/fast:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
-.PHONY : sensor_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-src/serialNetTools/qt_ui/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f CMakeFiles/Makefile2 src/serialNetTools/qt_ui/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-.PHONY : src/serialNetTools/qt_ui/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_py: src/serialNetTools/qt_ui/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_py
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_py/fast:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
-.PHONY : rosgraph_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-src/serialNetTools/qt_ui/CMakeFiles/doxygen.dir/rule:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f CMakeFiles/Makefile2 src/serialNetTools/qt_ui/CMakeFiles/doxygen.dir/rule
-.PHONY : src/serialNetTools/qt_ui/CMakeFiles/doxygen.dir/rule
-
-# Convenience name for target.
-doxygen: src/serialNetTools/qt_ui/CMakeFiles/doxygen.dir/rule
-
-.PHONY : doxygen
-
-# fast build rule for target.
-doxygen/fast:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/doxygen.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/doxygen.dir/build
-.PHONY : doxygen/fast
-
-# Convenience name for target.
-src/serialNetTools/qt_ui/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f CMakeFiles/Makefile2 src/serialNetTools/qt_ui/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-.PHONY : src/serialNetTools/qt_ui/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_lisp: src/serialNetTools/qt_ui/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_lisp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_lisp/fast:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-src/serialNetTools/qt_ui/CMakeFiles/download_extra_data.dir/rule:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f CMakeFiles/Makefile2 src/serialNetTools/qt_ui/CMakeFiles/download_extra_data.dir/rule
-.PHONY : src/serialNetTools/qt_ui/CMakeFiles/download_extra_data.dir/rule
-
-# Convenience name for target.
-download_extra_data: src/serialNetTools/qt_ui/CMakeFiles/download_extra_data.dir/rule
-
-.PHONY : download_extra_data
-
-# fast build rule for target.
-download_extra_data/fast:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/download_extra_data.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/download_extra_data.dir/build
-.PHONY : download_extra_data/fast
-
-# Convenience name for target.
-src/serialNetTools/qt_ui/CMakeFiles/run_tests.dir/rule:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f CMakeFiles/Makefile2 src/serialNetTools/qt_ui/CMakeFiles/run_tests.dir/rule
-.PHONY : src/serialNetTools/qt_ui/CMakeFiles/run_tests.dir/rule
-
-# Convenience name for target.
-run_tests: src/serialNetTools/qt_ui/CMakeFiles/run_tests.dir/rule
-
-.PHONY : run_tests
-
-# fast build rule for target.
-run_tests/fast:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/run_tests.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/run_tests.dir/build
-.PHONY : run_tests/fast
-
-# Convenience name for target.
-src/serialNetTools/qt_ui/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f CMakeFiles/Makefile2 src/serialNetTools/qt_ui/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-.PHONY : src/serialNetTools/qt_ui/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_lisp: src/serialNetTools/qt_ui/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : std_msgs_generate_messages_lisp
-
-# fast build rule for target.
-std_msgs_generate_messages_lisp/fast:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-.PHONY : std_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-src/serialNetTools/qt_ui/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f CMakeFiles/Makefile2 src/serialNetTools/qt_ui/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-.PHONY : src/serialNetTools/qt_ui/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_lisp: src/serialNetTools/qt_ui/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-
-.PHONY : roscpp_generate_messages_lisp
-
-# fast build rule for target.
-roscpp_generate_messages_lisp/fast:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/roscpp_generate_messages_lisp.dir/build
-.PHONY : roscpp_generate_messages_lisp/fast
-
-# Convenience name for target.
-src/serialNetTools/qt_ui/CMakeFiles/clean_test_results.dir/rule:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f CMakeFiles/Makefile2 src/serialNetTools/qt_ui/CMakeFiles/clean_test_results.dir/rule
-.PHONY : src/serialNetTools/qt_ui/CMakeFiles/clean_test_results.dir/rule
-
-# Convenience name for target.
-clean_test_results: src/serialNetTools/qt_ui/CMakeFiles/clean_test_results.dir/rule
-
-.PHONY : clean_test_results
-
-# fast build rule for target.
-clean_test_results/fast:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/clean_test_results.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/clean_test_results.dir/build
-.PHONY : clean_test_results/fast
-
-# Convenience name for target.
-src/serialNetTools/qt_ui/CMakeFiles/tests.dir/rule:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f CMakeFiles/Makefile2 src/serialNetTools/qt_ui/CMakeFiles/tests.dir/rule
-.PHONY : src/serialNetTools/qt_ui/CMakeFiles/tests.dir/rule
-
-# Convenience name for target.
-tests: src/serialNetTools/qt_ui/CMakeFiles/tests.dir/rule
-
-.PHONY : tests
-
-# fast build rule for target.
-tests/fast:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/tests.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/tests.dir/build
-.PHONY : tests/fast
-
-# Convenience name for target.
-src/serialNetTools/qt_ui/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f CMakeFiles/Makefile2 src/serialNetTools/qt_ui/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
-.PHONY : src/serialNetTools/qt_ui/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_nodejs: src/serialNetTools/qt_ui/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_nodejs/fast:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
-.PHONY : rosgraph_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-src/serialNetTools/qt_ui/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f CMakeFiles/Makefile2 src/serialNetTools/qt_ui/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-.PHONY : src/serialNetTools/qt_ui/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_cpp: src/serialNetTools/qt_ui/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : std_msgs_generate_messages_cpp
-
-# fast build rule for target.
-std_msgs_generate_messages_cpp/fast:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
-.PHONY : std_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-src/serialNetTools/qt_ui/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f CMakeFiles/Makefile2 src/serialNetTools/qt_ui/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-.PHONY : src/serialNetTools/qt_ui/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_py: src/serialNetTools/qt_ui/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-.PHONY : std_msgs_generate_messages_py
-
-# fast build rule for target.
-std_msgs_generate_messages_py/fast:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/std_msgs_generate_messages_py.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/std_msgs_generate_messages_py.dir/build
-.PHONY : std_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-src/serialNetTools/qt_ui/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f CMakeFiles/Makefile2 src/serialNetTools/qt_ui/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-.PHONY : src/serialNetTools/qt_ui/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_cpp: src/serialNetTools/qt_ui/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : sensor_msgs_generate_messages_cpp
-
-# fast build rule for target.
-sensor_msgs_generate_messages_cpp/fast:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
-.PHONY : sensor_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-src/serialNetTools/qt_ui/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f CMakeFiles/Makefile2 src/serialNetTools/qt_ui/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-.PHONY : src/serialNetTools/qt_ui/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_nodejs: src/serialNetTools/qt_ui/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : std_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-std_msgs_generate_messages_nodejs/fast:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
-.PHONY : std_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-src/serialNetTools/qt_ui/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f CMakeFiles/Makefile2 src/serialNetTools/qt_ui/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
-.PHONY : src/serialNetTools/qt_ui/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_eus: src/serialNetTools/qt_ui/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_eus
-
-# fast build rule for target.
-geometry_msgs_generate_messages_eus/fast:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
-.PHONY : geometry_msgs_generate_messages_eus/fast
 
 main.o: main.cpp.o
 
@@ -717,60 +267,6 @@ moc_mainwindow.cpp.s:
 	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/qt_ui.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/qt_ui.dir/moc_mainwindow.cpp.s
 .PHONY : moc_mainwindow.cpp.s
 
-moc_rosNode.o: moc_rosNode.cpp.o
-
-.PHONY : moc_rosNode.o
-
-# target to build an object file
-moc_rosNode.cpp.o:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/qt_ui.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/qt_ui.dir/moc_rosNode.cpp.o
-.PHONY : moc_rosNode.cpp.o
-
-moc_rosNode.i: moc_rosNode.cpp.i
-
-.PHONY : moc_rosNode.i
-
-# target to preprocess a source file
-moc_rosNode.cpp.i:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/qt_ui.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/qt_ui.dir/moc_rosNode.cpp.i
-.PHONY : moc_rosNode.cpp.i
-
-moc_rosNode.s: moc_rosNode.cpp.s
-
-.PHONY : moc_rosNode.s
-
-# target to generate assembly for a file
-moc_rosNode.cpp.s:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/qt_ui.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/qt_ui.dir/moc_rosNode.cpp.s
-.PHONY : moc_rosNode.cpp.s
-
-rosNode.o: rosNode.cpp.o
-
-.PHONY : rosNode.o
-
-# target to build an object file
-rosNode.cpp.o:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/qt_ui.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/qt_ui.dir/rosNode.cpp.o
-.PHONY : rosNode.cpp.o
-
-rosNode.i: rosNode.cpp.i
-
-.PHONY : rosNode.i
-
-# target to preprocess a source file
-rosNode.cpp.i:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/qt_ui.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/qt_ui.dir/rosNode.cpp.i
-.PHONY : rosNode.cpp.i
-
-rosNode.s: rosNode.cpp.s
-
-.PHONY : rosNode.s
-
-# target to generate assembly for a file
-rosNode.cpp.s:
-	cd /home/u/Desktop/cmakeproject/build && $(MAKE) -f src/serialNetTools/qt_ui/CMakeFiles/qt_ui.dir/build.make src/serialNetTools/qt_ui/CMakeFiles/qt_ui.dir/rosNode.cpp.s
-.PHONY : rosNode.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -778,43 +274,13 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
+	@echo "... install"
 	@echo "... list_install_components"
+	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... qt_ui_test"
-	@echo "... install"
-	@echo "... qt_ui"
 	@echo "... install/local"
-	@echo "... rosgraph_msgs_generate_messages_eus"
-	@echo "... rosgraph_msgs_generate_messages_cpp"
-	@echo "... roscpp_generate_messages_nodejs"
-	@echo "... std_msgs_generate_messages_eus"
-	@echo "... geometry_msgs_generate_messages_lisp"
-	@echo "... geometry_msgs_generate_messages_py"
-	@echo "... sensor_msgs_generate_messages_py"
-	@echo "... geometry_msgs_generate_messages_cpp"
-	@echo "... geometry_msgs_generate_messages_nodejs"
-	@echo "... rebuild_cache"
-	@echo "... roscpp_generate_messages_eus"
-	@echo "... sensor_msgs_generate_messages_lisp"
-	@echo "... sensor_msgs_generate_messages_nodejs"
-	@echo "... roscpp_generate_messages_py"
-	@echo "... roscpp_generate_messages_cpp"
-	@echo "... sensor_msgs_generate_messages_eus"
-	@echo "... rosgraph_msgs_generate_messages_py"
-	@echo "... doxygen"
-	@echo "... rosgraph_msgs_generate_messages_lisp"
-	@echo "... download_extra_data"
-	@echo "... run_tests"
-	@echo "... std_msgs_generate_messages_lisp"
-	@echo "... roscpp_generate_messages_lisp"
-	@echo "... clean_test_results"
-	@echo "... tests"
-	@echo "... rosgraph_msgs_generate_messages_nodejs"
-	@echo "... std_msgs_generate_messages_cpp"
-	@echo "... std_msgs_generate_messages_py"
-	@echo "... sensor_msgs_generate_messages_cpp"
-	@echo "... std_msgs_generate_messages_nodejs"
-	@echo "... geometry_msgs_generate_messages_eus"
+	@echo "... qt_ui"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
@@ -824,12 +290,6 @@ help:
 	@echo "... moc_mainwindow.o"
 	@echo "... moc_mainwindow.i"
 	@echo "... moc_mainwindow.s"
-	@echo "... moc_rosNode.o"
-	@echo "... moc_rosNode.i"
-	@echo "... moc_rosNode.s"
-	@echo "... rosNode.o"
-	@echo "... rosNode.i"
-	@echo "... rosNode.s"
 .PHONY : help
 
 

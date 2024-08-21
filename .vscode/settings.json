@@ -65,7 +65,9 @@
     "istream": "cpp",
     "numeric": "cpp",
     "ostream": "cpp",
-    "sstream": "cpp"
+    "sstream": "cpp",
+    "qvariantmap": "cpp",
+    "qcoreapplication": "cpp"
   },
   "ros.distro": "noetic"
 }
