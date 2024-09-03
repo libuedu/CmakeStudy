@@ -5,13 +5,13 @@ MainWindow::MainWindow(int argc, char **argv, QWidget *parent)
     : QMainWindow(parent), ui_(new Ui::MainWindow)
 {
     ui_->setupUi(this);
-    QObject::connect(ui_->pushButton_send, &QPushButton::clicked, this, &MainWindow::slot_btn_send);
-    QObject::connect(this, &MainWindow::signal_send, this, &MainWindow::slot_send_textEdit);
+    // QObject::connect(ui_->pushButton_send, &QPushButton::clicked, this, &MainWindow::slot_btn_send);
+    // QObject::connect(this, &MainWindow::signal_send, this, &MainWindow::slot_send_textEdit);
 
-    std::string log_path = common_log_.get_log_path();
-    myLog_ = new MyLog(log_path, "mainWindow");
+    // std::string log_path = common_log_.get_log_path();
+    // myLog_ = new MyLog(log_path, "mainWindow");
 
-    LOG(INFO) << "mainWindow Log Hello World!!!";
+    // LOG(INFO) << "mainWindow Log Hello World!!!";
 }
 
 MainWindow::~MainWindow()
@@ -25,10 +25,10 @@ MainWindow::~MainWindow()
  */
 void MainWindow::slot_btn_send()
 {
-    QString send_msg = ui_->lineEdit_input->text();
-    qDebug() << send_msg;
-    // emit signal_send(send_msg);
-    emit signal_rosPub(send_msg);
+    // QString send_msg = ui_->lineEdit_input->text();
+    // qDebug() << send_msg;
+    // // emit signal_send(send_msg);
+    // emit signal_rosPub(send_msg);
 }
 
 /**

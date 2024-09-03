@@ -3,12 +3,21 @@
 /*
     构造函数
 */
-MySerial::MySerial(const string &groupID, const string &serialName, const int &baudRate,
-                   const int &checkDate, const int &dataBit, const int &stopBit)
-    : groupID_(groupID), serialName_(serialName), baudRate_(baudRate),
-      checkDate_(checkDate), dataBit_(dataBit), stopBit_(stopBit)
+MySerial::MySerial()
 {
 }
+
+void MySerial::init(const string &groupID, const string &serialName, const int &baudRate,
+                    const int &checkDate, const int &dataBit, const int &stopBit)
+{
+    groupID_ = groupID;
+    serialName_ = serialName;
+    baudRate_ = baudRate;
+    checkDate_ = checkDate;
+    dataBit_ = dataBit;
+    stopBit_ = stopBit;
+}
+
 /*
     析构函数
 */
@@ -148,11 +157,19 @@ bool MySerial::start()
     {
         // 建立读取串口数据的连接
         QObject::connect(serialPort_, &QSerialPort::readyRead, this, &MySerial::slot_read);
+        QVariantMap stateMap;
+        stateMap["type"] = "mySerial";
+        stateMap["state"] = true;
+        emit signal_openStatus(stateMap);
         return true;
     }
     else
     {
         stop();
+        QVariantMap stateMap;
+        stateMap["type"] = "mySerial";
+        stateMap["state"] = false;
+        emit signal_openStatus(stateMap);
         return false;
     }
 }

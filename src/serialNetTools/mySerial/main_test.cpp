@@ -14,18 +14,24 @@ int main(int argc, char **argv)
     LOG(INFO) << "mySerial test start.";
 
     QCoreApplication app(argc, argv);
-
-    MySerial *mySerial = new MySerial("1", "/dev/pts/5", 115200, 0, 8, 1);
-    // QMetaObject::invokeMethod(mySerial, "slot_start", Qt::QueuedConnection);
+    MySerial *mySerial = new MySerial();
 
     QThread *thread = new QThread();
     mySerial->moveToThread(thread);
-    QObject::connect(thread, &QThread::started, mySerial, &MySerial::slot_start);
-    thread->start();
-    int result = app.exec();
 
-    mySerial->deleteLater();
-    thread->deleteLater();
+    thread->start();
+    LOG(INFO) << "mySerial start.";
+
+    mySerial->init("1", "/dev/ttyS1", 115200, 0, 8, 1);
+    QMetaObject::invokeMethod(mySerial, "start", Qt::QueuedConnection);
+
+    // QThread *thread = new QThread();
+    // mySerial->moveToThread(thread);
+    // QObject::connect(thread, &QThread::started, mySerial, &MySerial::slot_start);
+    // thread->start();
+    int result = app.exec();
+    // mySerial->deleteLater();
+    // thread->deleteLater();
 
     return result;
 }

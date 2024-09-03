@@ -15,13 +15,14 @@ class MySerial : public QObject
     Q_OBJECT;
 
 public:
-    MySerial(const string &groupID, const string &serialName, const int &baudRate,
-             const int &checkDate, const int &dataBit, const int &stopBit);
+    MySerial();
     ~MySerial();
 
 public:
-    bool start();
-    void stop();
+    Q_INVOKABLE bool start();
+    Q_INVOKABLE void stop();
+    void init(const string &groupID, const string &serialName, const int &baudRate,
+              const int &checkDate, const int &dataBit, const int &stopBit);
 
 public slots:
     void slot_read();
@@ -30,6 +31,7 @@ public slots:
 
 signals:
     void signal_serial(const QVariantMap &msg);
+    void signal_openStatus(const QVariantMap &msg);
 
 private:
     string groupID_;
