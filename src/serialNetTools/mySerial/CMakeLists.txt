@@ -16,7 +16,7 @@ message(STATUS "CMAKE_CURRENT_SOURCE_DIR = ${CMAKE_CURRENT_SOURCE_DIR}")
 #************************
 # 导入QT库
 #************************
-find_package(Qt5 COMPONENTS SerialPort Core REQUIRED)
+find_package(Qt5 COMPONENTS SerialPort Core Concurrent REQUIRED)
 
 
 #************************
@@ -35,7 +35,7 @@ QT5_WRAP_CPP(QT_MOC_HPP ${QT_MOC}) #.h 文件（包含Qt对象的头文件）自动生成moc（元
 #************************
 add_library(${PROJECT_NAME} SHARED  ${QT_SOURCES}  
                                     ${QT_MOC_HPP})
-target_link_libraries(${PROJECT_NAME} Qt5::Core Qt5::SerialPort common)
+target_link_libraries(${PROJECT_NAME} Qt5::Core Qt5::SerialPort Qt5::Concurrent common)
 
 #*************************
 # 生成可执行文件
