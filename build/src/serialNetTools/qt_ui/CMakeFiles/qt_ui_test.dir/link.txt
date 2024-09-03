@@ -1,1 +1,0 @@
-/usr/bin/c++  -w -O2 -g -ggdb -w   CMakeFiles/qt_ui_test.dir/main.cpp.o  -o ../../../../bin/qt_ui_test  -Wl,-rpath,/home/u/Desktop/cmakeproject/lib ../../../../lib/libqt_ui.so /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8 /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8 /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8 ../../../../lib/libcommon.so -lglog 

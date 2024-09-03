@@ -1,4 +1,0 @@
-Log file created at: 2024/08/21 22:50:37
-Running on machine: u-virtual-machine
-Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
-I0821 22:50:37.725654  5893 main_test.cpp:13] mySerial test start.

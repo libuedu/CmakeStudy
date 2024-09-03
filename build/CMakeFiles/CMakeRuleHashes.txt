@@ -1,6 +1,0 @@
-# Hashes of file build rules.
-f6a357587765cf6d31f5c6805715dd15 src/serialNetTools/mySerial/moc_mySerial.cpp
-f629961ed27d36c2b80edd0ed8d833d0 src/serialNetTools/qt_ui/moc_mainwindow.cpp
-93ae60c8438122cc21463371f240b379 src/serialNetTools/qt_ui/ui_mainwindow.h
-b854d9c817c94f5b6ec41ea671cfdd63 src/serialNetTools/rosNode/CMakeFiles/clean_test_results
-bc9f2b5173f311df01bf40827179933e src/serialNetTools/rosNode/moc_rosNode.cpp

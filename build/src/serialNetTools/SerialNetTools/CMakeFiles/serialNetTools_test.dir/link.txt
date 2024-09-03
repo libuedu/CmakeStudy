@@ -1,1 +1,0 @@
-/usr/bin/c++  -w -O2 -g -ggdb -w   CMakeFiles/serialNetTools_test.dir/main_test.cpp.o  -o ../../../../bin/serialNetTools_test  -Wl,-rpath,/home/u/Desktop/cmakeproject/lib ../../../../lib/libserialNetTools.so 
