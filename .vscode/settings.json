@@ -70,7 +70,8 @@
     "qcoreapplication": "cpp",
     "qtserialport": "cpp",
     "qserialportinfo": "cpp",
-    "qobject": "cpp"
+    "qobject": "cpp",
+    "qdebug": "cpp"
   },
   "ros.distro": "noetic",
   "C_Cpp.errorSquiggles": "disabled"

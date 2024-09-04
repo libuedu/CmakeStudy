@@ -50,7 +50,7 @@ message(STATUS "CMAKE_CURRENT_SOURCE_DIR = ${CMAKE_CURRENT_SOURCE_DIR}")
 #************************
 # 导入QT库
 #************************
-find_package(Qt5 COMPONENTS Widgets Core REQUIRED)
+find_package(Qt5 COMPONENTS Widgets Core SerialPort REQUIRED)
 
 
 #************************
@@ -89,7 +89,7 @@ add_library(${PROJECT_NAME} SHARED  ${QT_SOURCES}
                                     ${QT_RESOURCES_CPP} 
                                     ${QT_FORMS_HPP} 
                                     ${QT_MOC_HPP})
-target_link_libraries(${PROJECT_NAME} Qt5::Widgets common)
+target_link_libraries(${PROJECT_NAME} Qt5::Widgets common Qt5::SerialPort)
 
 
 

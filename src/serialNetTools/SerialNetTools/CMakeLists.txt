@@ -8,60 +8,61 @@
 #************************
 project(serialNetTools)
 
-#*************************
-# 设置编译类型
-#************************
-# set(DEFAULT_BUILD_TYPE "Release")
-# if(NOT CMAKE_BUILD_TYPE)
-#     set(CMAKE_BUILD_TYPE "Release")
-# endif()
-
-#*************************
-# 指定C++标准 
-#************************
-# set(CMAKE_CXX_STANDARD 17)
-# set(CMAKE_CXX_STANDARD_REQUIRED ON) # 确保编译器支持所选标准
-
-#************************
-# 设置优化等级
-#************************
-# set(CMAKE_CXX_FLAGS "-w")# 忽略警告信息
-# set(CMAKE_CXX_FLAGS_DEBUG "-g -ggdb ${CMAKE_CXX_FLAGS}")# 设置DEBUG模式的编译选项
-# set(CMAKE_CXX_FLAGS_RELEASE "-O2 -g -ggdb ${CMAKE_CXX_FLAGS}")# 设置RELEASE模式的编译选项
-
-
-# set(VAL "a")    	# VAL 内容为 1 个值：a
-# set(VAL "a" b)  	# VAL 内容为 2 个值：a;b
-# set(VAL a;b)    	# VAL 内容为 2 个值：a;b
-# set(VAL a;b c)  	# VAL 内容为 3 个值：a;b;c
-
-# message(STATUS "VAL = ${VAL}")
-
 message(STATUS "PROJECT_NAME = ${PROJECT_NAME}")
 
 
 #*************************
 # 添加头文件
 #************************
-# set(CMAKE_INCLUDE_CURRENT_DIR ON)
-# include_directories(${CMAKE_CURRENT_SOURCE_DIR})
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
 message(STATUS "CMAKE_CURRENT_SOURCE_DIR = ${CMAKE_CURRENT_SOURCE_DIR}")
+
+#************************
+# 导入QT库
+#************************
+find_package(Qt5 COMPONENTS Widgets Network Concurrent Core REQUIRED)
+
+#导入ROS
+# find_package(catkin REQUIRED COMPONENTS
+#        roscpp
+#        rospy
+#        std_msgs
+#        sensor_msgs
+#        )
+
+# include_directories(${catkin_INCLUDE_DIRS})
+
+#************************
+# 添加源文件
+#************************
+file(GLOB_RECURSE QT_MOC RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} FOLLOW_SYMLINKS *.h)
+set(QT_SOURCES serialNetTools.cpp)
+
+#三个用于处理Qt特定资源和代码生成的命令
+# QT5_WRAP_UI(QT_FORMS_HPP ${QT_FORMS}) #从 .ui 文件自动生成用户界面类的头文件和源文件
+# QT5_ADD_RESOURCES(QT_RESOURCES_CPP ${QT_RESOURCES})#将 .qrc 资源文件转换成可编译的C++源文件
+QT5_WRAP_CPP(QT_MOC_HPP ${QT_MOC}) #.h 文件（包含Qt对象的头文件）自动生成moc（元对象编译器）文件，这些文件是Qt信号和槽机制所必需的
 
 #*************************
 # 生成动态库
 #************************
-add_library(${PROJECT_NAME} SHARED serialNetTools.cpp)
-add_library(${PROJECT_NAME}_static STATIC serialNetTools.cpp)
-# target_link_libraries(${PROJECT_NAME}_test ${PROJECT_NAME})
+add_library(${PROJECT_NAME} SHARED ${QT_SOURCES} 
+                                   ${QT_MOC_HPP})
+target_link_libraries(${PROJECT_NAME} 
+                      Qt5::Widgets
+                      Qt5::Core
+                      Qt5::Concurrent
+                      Qt5::Network
+                      qt_ui
+                      mySerial
+                     )
 
 
 #*************************
 # 生成可执行文件
 #************************
-# add_executable(${PROJECT_NAME}_test main_test.cpp serialNetTools.cpp)
-add_executable(${PROJECT_NAME}_test main_test.cpp)
+add_executable(${PROJECT_NAME}_main main.cpp)
 
-target_link_libraries(${PROJECT_NAME}_test ${PROJECT_NAME})
-
-# target_link_libraries(${PROJECT_NAME}_test ${PROJECT_NAME}_static)
+target_link_libraries(${PROJECT_NAME}_main ${PROJECT_NAME})
